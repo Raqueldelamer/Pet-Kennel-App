@@ -22,9 +22,10 @@ let petNameInput = document.getElementById("pet-name");
 
 function handleSave() {
     console.log("Save button when clicked");
-    let firstName = firstNameInput;
+    let firstName = firstNameInput.value;
     state.firstName = firstName;
-    
+    console.log("Added name" + state.firstName);
+
     state.lastName = lastNameInput;
     state.phoneNumber = phoneNumberInput;
     state.email = emailInput;
@@ -33,14 +34,13 @@ function handleSave() {
     state.petName = petNameInput;
 
     
-    console.log("Added name" + state.name);
     console.log(state);
-    firstNameInput.value = "",
-    lastNameInput.value = "",
-    phoneNumberInput.value = "",
-    emailInput.value = "",
-    cityInput.value = "",
-    zipCodeInput.value = "",
+    firstNameInput.value = "";
+    lastNameInput.value = "";
+    phoneNumberInput.value = "";
+    emailInput.value = "";
+    cityInput.value = "";
+    zipCodeInput.value = "";
     petNameInput.value = ""
 
 }
