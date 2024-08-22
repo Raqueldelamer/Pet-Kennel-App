@@ -17,7 +17,7 @@ let lastNameInput = document.getElementById("lname");
 let phoneNumberInput = document.getElementById("phone-number");
 let emailInput = document.getElementById("email");
 let cityInput = document.getElementById("city");
-let zipCodeInput = document.getElementById("zipcode");
+let zipCodeInput = document.getElementById("zipCode");
 let petNameInput = document.getElementById("pet-name");
 
 function handleSave() {
@@ -43,7 +43,7 @@ function handleSave() {
 
 }
 
-let user = createPetOwner(state.firstName, state.lastName, state.phoneNumber, state.email, state.city, state.zipCode, state.petName);
+let user = petOwner(state.firstName, state.lastName, state.phoneNumber, state.email, state.city, state.zipCode, state.petName);
 user.status();
 user.render();
 
