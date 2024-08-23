@@ -7,6 +7,7 @@ function createPetOwner(firstName, lastName, phoneNumber, email, city, zipCode, 
         city: city,
         zipCode: zipCode,
         petName: petName,
+        
         status: function() {
             console.log(`First Name: ${this.firstName} Last Name: ${this.lastName} Phone Number: ${this.phoneNumber} 
                 Email: ${this.email} City: ${this.city} Zip Code: ${this.zipCode} Pet Name: ${this.petName}`);
