@@ -43,7 +43,8 @@ function handleSave() {
 
 }
 
-let user = petOwner(state.firstName, state.lastName, state.phoneNumber, state.email, state.city, state.zipCode, state.petName);
+
+let user = createPetOwner(state.firstName, state.lastName, state.phoneNumber, state.email, state.city, state.zipCode, state.petName);
 user.status();
 user.render();
 

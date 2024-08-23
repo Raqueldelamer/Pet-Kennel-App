@@ -13,7 +13,7 @@ function createPetOwner(firstName, lastName, phoneNumber, email, city, zipCode, 
         },
         
         render: function(){
-            let petOwnerFirstName = document.getElementById("firsNameOutput");
+            let petOwnerFirstName = document.getElementById("firstNameOutput");
             petOwnerFirstName.textContent = this.firstName;
             let petOwnerLastName = document.getElementById("lastNameOutput");
             petOwnerLastName.textContent = this.lastName;
@@ -33,6 +33,6 @@ function createPetOwner(firstName, lastName, phoneNumber, email, city, zipCode, 
     return petOwner;
 }
 
-let p1 = createPetOwner("Raquel", "Marie", "8889990000", "r@gmail.com", "New Orleans", "70115", "Minou");
-console.log(p1);
-p1.status();
+// let p1 = createPetOwner("Raquel", "Marie", "8889990000", "r@gmail.com", "New Orleans", "70115", "Minou");
+// console.log(p1);
+// p1.status();
