@@ -12,13 +12,13 @@ let state = {
 console.log("bonjour le monde!");
 
 let saveBtn = document.getElementById("saveButton");
-let firsNameInput = document.getElementById("fname");
-let lastNameInput = document.getElementById("lname");
-let phoneNumberInput = document.getElementById("phone-number");
+let firstNameInput = document.getElementById("firstName");
+let lastNameInput = document.getElementById("lastName");
+let phoneNumberInput = document.getElementById("phoneNumber");
 let emailInput = document.getElementById("email");
 let cityInput = document.getElementById("city");
 let zipCodeInput = document.getElementById("zipCode");
-let petNameInput = document.getElementById("pet-name");
+let petNameInput = document.getElementById("petName");
 
 function handleSave() {
     console.log("Save button clicked");
