@@ -10,6 +10,17 @@ function createPet(nameInput, speciesInput, energyInput, happinessInput) {
         status() {
             console.log(`Pet name: ${this.name}, Species: ${this.species}, Energy: ${this.energy}, Happiness: ${this.happiness}.`);
         },
+        
+        toHTML() {
+            return `
+            <div>
+                Name: ${this.name}
+                Age: ${this.age}
+                Species: ${this.species}
+            </div>
+            `
+        },
+
         play() {
             this.energy -= 15;
             this.happiness += 10;

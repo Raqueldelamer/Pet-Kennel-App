@@ -7,25 +7,11 @@ let state = {
     
 };
 
-// renderPets(){
-//    let pet1NameInput = document.getElementById("pet1NameOutput");
-//    pet1NameInput.textContent = this.pet1Name;
-//    let pet2NameInput = document.getElementById("pet2NameOutput");
-//    pet2NameInput.textContent = this.pet2Name;
-//    let pet3NameInput = document.getElementById("pet3NameOutput");
-//    pet3NameInput.textContent = this.pet3Name;
+let pets = [];
+pets.push(createPet("Minou", "3", "cat"));
+pets.push(createPet("Sheba", "1", "cat"));
+pets.push(createPet("Orpheo", "1", "cat"));
 
-
-   // pet = {
-     //   name: nameInput,
-      //  species: speciesInput,
-     //   energy: energyInput,
-     //   happiness: happinessInput,
-    // let pet1 = createPet("Minou", "Cat", 20, 30);
-   // let pet2 = createPet("Sheba", "Cat", 20, 30);
-   //  let pet3 = createPet("Orpheo", "Cat", 40, 30);
-
-// return pet1;
 
 let submitBtn = document.getElementById("submitButton");
 let petNameInput = document.getElementById("petName");
@@ -37,18 +23,41 @@ function handleSubmit() {
     state.petName = petNameInput.value;
     state.petAge = petAgeInput.value;
     state.petSpecies = petSpeciesInput.value;
+    pets.push(createPet(state.petName, state.petAge, state.petSpecies));
     
-
-    console.log("Add Name: " + state.petName);
-    //console.log("Add Age:" + state.petAge);
+    console.log(pets);
     console.log(state);
+
 
     petNameInput.value = "";
     petAgeInput.value = "";
     petSpeciesInput.value = ""
 }
-// let user2 = createPet(state.firstName, state.lastName, state.phoneNumber, state.email, state.city, state.zipCode, state.petName);
-// user2.status();
-// user2.render();
+
+function renderPets() {
+    let html = "";
+    let output = document.getElementById("petOutput");
+    for(let i=0; i<pets.length; i++){
+        
+        html += pets[i].toHTML();
+    }
+    output.innerHTML = html;
+}
+
+
 
 submitBtn.addEventListener("click", handleSubmit);
+
+
+// AGGREGATE PET LIST
+//const pets = [];
+//pets.push({ petName: 'Minou', petAge: '3', petSpecies: 'cat'});
+//pets.push({ petName: 'Sheba', petAge: '2', petSpecies: 'cat'});
+//pets.push({ petName: 'Orpheo', petAge: '1', petSpecies: 'cat'});
+
+// |aggregate the pet names from the `pets` array using `reduce`|
+
+//const petList = pets.reduce((acc, pet, index) => {
+//return acc + pet.petName + (index < pets.length - 1 ? ', ' : '');
+// }, '');
+// console.log('Pet Name List:', petList);
