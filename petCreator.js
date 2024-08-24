@@ -14,9 +14,10 @@ function createPet(nameInput, speciesInput, energyInput, happinessInput) {
         toHTML() {
             return `
             <div>
-                Name: ${this.name}
-                Age: ${this.age}
-                Species: ${this.species}
+                <h3>Pets</h3>
+                <p>Name: ${this.name}</p>
+                <p>Age: ${this.age}</p>
+                <p>Species: ${this.species}</p>
             </div>
             `
         },

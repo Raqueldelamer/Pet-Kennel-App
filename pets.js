@@ -24,10 +24,9 @@ function handleSubmit() {
     state.petAge = petAgeInput.value;
     state.petSpecies = petSpeciesInput.value;
     pets.push(createPet(state.petName, state.petAge, state.petSpecies));
-    
+    renderPets();
     console.log(pets);
     console.log(state);
-
 
     petNameInput.value = "";
     petAgeInput.value = "";
@@ -37,27 +36,14 @@ function handleSubmit() {
 function renderPets() {
     let html = "";
     let output = document.getElementById("petOutput");
+    
     for(let i=0; i<pets.length; i++){
-        
+        console.log(pets[i]);    
         html += pets[i].toHTML();
     }
+
     output.innerHTML = html;
+    
 }
 
-
-
 submitBtn.addEventListener("click", handleSubmit);
-
-
-// AGGREGATE PET LIST
-//const pets = [];
-//pets.push({ petName: 'Minou', petAge: '3', petSpecies: 'cat'});
-//pets.push({ petName: 'Sheba', petAge: '2', petSpecies: 'cat'});
-//pets.push({ petName: 'Orpheo', petAge: '1', petSpecies: 'cat'});
-
-// |aggregate the pet names from the `pets` array using `reduce`|
-
-//const petList = pets.reduce((acc, pet, index) => {
-//return acc + pet.petName + (index < pets.length - 1 ? ', ' : '');
-// }, '');
-// console.log('Pet Name List:', petList);
