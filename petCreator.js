@@ -27,13 +27,12 @@ function createPet(nameInput, speciesInput, energyInput, happinessInput) {
 let pet1 = createPet("Minou", "Cat", 20, 30);
 let pet2 = createPet("Sheba", "Cat", 20, 30);
 let pet3 = createPet("Orpheo", "Cat", 40, 30);
-let pet4 = createPet("Twinkle", "Cat", 10, 30);
+
 
 let catKennel = [];
 catKennel.push(pet1);
 catKennel.push(pet2);
 catKennel.push(pet3);
-catKennel.push(pet4);
 catKennel.forEach(pet => pet.feed());
 catKennel[0].play()                        // play more with pet 1
 console.table(catKennel)
