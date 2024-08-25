@@ -18,6 +18,10 @@ let petNameInput = document.getElementById("petName");
 let petAgeInput = document.getElementById("petAge");
 let petSpeciesInput = document.getElementById("petSpecies");
 
+    petNameInput.value = "";
+    petAgeInput.value = "";
+    petSpeciesInput.value = ""
+
 function handleSubmit() {
     console.log("Submit button clicked");
     state.petName = petNameInput.value;
@@ -27,10 +31,11 @@ function handleSubmit() {
     renderPets();
     console.log(pets);
     console.log(state);
-
-    petNameInput.value = "";
-    petAgeInput.value = "";
-    petSpeciesInput.value = ""
+    
+    localStorage.setItem("petName", state.petName);   //saved in local storage
+    localStorage.setItem("petAge", state.petAge);
+    localStorage.setItem("petSpecies", state.petSpecies);   
+    
 }
 
 function renderPets() {

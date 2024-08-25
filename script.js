@@ -29,6 +29,7 @@ function handleSave() {
     state.city = cityInput.value;
     state.zipCode = zipCodeInput.value;
     state.petName = petNameInput.value;
+    
 
     localStorage.setItem("firstName", state.firstName);   //saved in local storage
     localStorage.setItem("lastName", state.lastName);

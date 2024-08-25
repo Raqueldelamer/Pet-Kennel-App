@@ -1,15 +1,14 @@
 console.log("Hello from petCreator.js! ");
 
-function createPet(nameInput, ageInput, speciesInput, energyInput, happinessInput) {
+function createPet(nameInput, ageInput, speciesInput, energyInput) {
     let pet = {
         name: nameInput,
         age: ageInput,
         species: speciesInput,
         energy: energyInput,
-        happiness: happinessInput,
 
         status() {
-            console.log(`Pet name: ${this.name}, Species: ${this.species}, Energy: ${this.energy}, Happiness: ${this.happiness}.`);
+            console.log(`Pet name: ${this.name}, Species: ${this.species}, Energy: ${this.energy}.`);
         },
         
         toHTML() {
@@ -28,20 +27,20 @@ function createPet(nameInput, ageInput, speciesInput, energyInput, happinessInpu
         play() {
             this.energy -= 15;
             this.happiness += 10;
-            console.log(`After playing with ${this.name} energy is ${this.energy} and happiness is ${this.happiness}.`);
+            //console.log(`After playing with ${this.name} energy is ${this.energy} and happiness is ${this.happiness}.`);
         },
         feed() {
             this.energy += 20;
             this.happiness += 30;
-            console.log(`After feeding ${this.name}, energy level is now ${this.energy}, and happiness level is ${this.happiness}.`);
+           // console.log(`After feeding ${this.name}, energy level is now ${this.energy}, and happiness level is ${this.happiness}.`);
         }
     }
 
     return pet;
 }
-let pet1 = createPet("Minou", "Cat", 20, 30);
-let pet2 = createPet("Sheba", "Cat", 20, 30);
-let pet3 = createPet("Orpheo", "Cat", 40, 30);
+let pet1 = createPet("Minou", "Cat", 20);
+let pet2 = createPet("Sheba", "Cat", 20);
+let pet3 = createPet("Orpheo", "Cat", 40);
 
 
 let catKennel = [];
