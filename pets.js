@@ -33,8 +33,11 @@ function handleSubmit() {
     console.log(state);
     
     localStorage.setItem("petName", state.petName);   //saved in local storage
+    console.log(petName);
     localStorage.setItem("petAge", state.petAge);
-    localStorage.setItem("petSpecies", state.petSpecies);   
+    console.log(petAge);
+    localStorage.setItem("petSpecies", state.petSpecies);  
+    console.log(petSpecies); 
     
 }
 
