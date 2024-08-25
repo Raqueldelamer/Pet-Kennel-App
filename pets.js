@@ -9,7 +9,7 @@ let state = {
 
 let pets = [];
 pets.push(createPet("Minou", "3", "cat"));
-pets.push(createPet("Sheba", "1", "cat"));
+pets.push(createPet("Sheba", "2", "cat"));
 pets.push(createPet("Orpheo", "1", "cat"));
 
 

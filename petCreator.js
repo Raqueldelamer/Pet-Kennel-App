@@ -1,8 +1,9 @@
 console.log("Hello from petCreator.js! ");
 
-function createPet(nameInput, speciesInput, energyInput, happinessInput) {
+function createPet(nameInput, ageInput, speciesInput, energyInput, happinessInput) {
     let pet = {
         name: nameInput,
+        age: ageInput,
         species: speciesInput,
         energy: energyInput,
         happiness: happinessInput,
@@ -13,11 +14,13 @@ function createPet(nameInput, speciesInput, energyInput, happinessInput) {
         
         toHTML() {
             return `
-            <div>
-                <h3>Pets</h3>
-                <p>Name: ${this.name}</p>
-                <p>Age: ${this.age}</p>
-                <p>Species: ${this.species}</p>
+            <div class="d-flex justify-content-center">
+            <div class="card w-20">
+            <div class="card-body">
+            <p class="card-text">Name: ${this.name} : </p>
+                <p>Age: ${this.age} : </p>
+                <p>Species: ${this.species} : </p>
+            </div>
             </div>
             `
         },
