@@ -20,10 +20,11 @@ let petSpeciesInput = document.getElementById("petSpecies");
 
     petNameInput.value = "";
     petAgeInput.value = "";
-    petSpeciesInput.value = ""
+    petSpeciesInput.value = "";
 
 function handleSubmit() {
     console.log("Submit button clicked");
+   
     state.petName = petNameInput.value;
     state.petAge = petAgeInput.value;
     state.petSpecies = petSpeciesInput.value;

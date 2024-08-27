@@ -1,14 +1,15 @@
 console.log("Hello from petCreator.js! ");
 
-function createPet(nameInput, ageInput, speciesInput, energyInput) {
+function createPet(nameInput, ageInput, speciesInput, energyInput, happinessInput) {
     let pet = {
         name: nameInput,
         age: ageInput,
         species: speciesInput,
         energy: energyInput,
+        happiness: happinessInput,
 
         status() {
-            console.log(`Pet name: ${this.name}, Species: ${this.species}, Energy: ${this.energy}.`);
+            console.log(`Pet name: ${this.name}, Species: ${this.species}, Energy: ${this.energy}, Happiness: ${this.happiness}.`);
         },
         
         toHTML() {
@@ -35,34 +36,11 @@ function createPet(nameInput, ageInput, speciesInput, energyInput) {
            // console.log(`After feeding ${this.name}, energy level is now ${this.energy}, and happiness level is ${this.happiness}.`);
         }
     }
-
+    console.log("created pet..");
+    pet.status();
     return pet;
 }
-let pet1 = createPet("Minou", "Cat", 20);
-let pet2 = createPet("Sheba", "Cat", 20);
-let pet3 = createPet("Orpheo", "Cat", 40);
+let pet1 = createPet("Minou", "", "", 100, 60);
+let pet2 = createPet("Sheba", "", "", 100, 50);
+let pet3 = createPet("Orpheo", "", "", 100, 50);
 
-
-let catKennel = [];
-catKennel.push(pet1);
-catKennel.push(pet2);
-catKennel.push(pet3);
-catKennel.forEach(pet => pet.feed());
-catKennel[0].play()                        // play more with pet 1
-console.table(catKennel)
-
-
-
-for (let i=0; i < catKennel.length; i++) {       // conditional feeding according to energy level
-    console.log(`${catKennel[i].name} has the energy level of ${catKennel[i].energy} and is indicating that it wants to be fed`)
-
-    if(catKennel[i].energy < 50) {    //conditional if cat energy level is < 50 , feed them
-    
-        catKennel[i].feed();
-
-}   else  {                           // else if more than 50 , do not feed
-
-    console.log(`But ${catKennel[i].name} has energy level of ${catKennel[i].energy} and doesn't need to feed.`)
-}                                    
-}
-console.table(catKennel)
