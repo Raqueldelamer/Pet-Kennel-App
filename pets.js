@@ -8,9 +8,9 @@ let state = {
 };
 
 let pets = [];
-pets.push(createPet("Minou", "3", "cat"));
-pets.push(createPet("Sheba", "2", "cat"));
-pets.push(createPet("Orpheo", "1", "cat"));
+pets.push(createPet("Minou", "3", "cat", "", ""));
+pets.push(createPet("Sheba", "2", "cat", "", ""));
+pets.push(createPet("Orpheo", "1", "cat", "", ""));
 
 
 let submitBtn = document.getElementById("submitButton");
@@ -18,17 +18,16 @@ let petNameInput = document.getElementById("petName");
 let petAgeInput = document.getElementById("petAge");
 let petSpeciesInput = document.getElementById("petSpecies");
 
-    petNameInput.value = "";
-    petAgeInput.value = "";
-    petSpeciesInput.value = "";
 
 function handleSubmit() {
     console.log("Submit button clicked");
-   
+
     state.petName = petNameInput.value;
     state.petAge = petAgeInput.value;
     state.petSpecies = petSpeciesInput.value;
-    pets.push(createPet(state.petName, state.petAge, state.petSpecies));
+    
+    pets.push(createPet(state.petName, state.petAge, state.petSpecies, state.petEnergy, state.petHappiness));
+    
     renderPets();
     console.log(pets);
     console.log(state);
